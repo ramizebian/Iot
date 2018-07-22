@@ -54,8 +54,6 @@ Creating a social/smart house and making the world a smaller connected place.
 *	Targeted Ads based on daily behavior and interaction smart devices.
 
 ### Built With
-*	php
-*	CSS
 *	graph-api-(Facebook Login)
 *	mysql
 *	Angular Js
