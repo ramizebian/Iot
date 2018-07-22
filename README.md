@@ -57,4 +57,6 @@ Creating a social/smart house and making the world a smaller connected place.
 *	graph-api-(Facebook Login)
 *	mysql
 *	Angular Js
+*  Ionic 1
+*  PHP
 
