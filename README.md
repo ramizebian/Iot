@@ -13,7 +13,7 @@ We are launching “IoT” – a revolutionary form of social platform/applicati
 _Mobile application_
 * 	Can login with Facebook to get into the program.
 * 	Can invite Facebook users to access one of your smart devices.
-* 	Can revoke access to any user from the smart device you own.
+* 	Can revoke access from any user from the smart device you own.
 * 	Can see history logs.
 * 	Can schedule an invite (By days or Hours)
 
