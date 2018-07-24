@@ -2,7 +2,7 @@
 ## Overall Concept: Problem vs. Solution
 
 ### Problem
-Making the world a smaller connected place and building a growing community is no more an option. We've seen a variety of platforms connecting people together or people to services, but how about connecting smart devices to people under the biggest social network platform... Facebook. IBM Watson, Google cloud and Microsoft Azure have already implemented IoT as part there services. Why not providing all Facebook users with a smart and social IoT platform? This could possibly be the first social smart platform in the world! 
+Making the world a smaller connected place and building a growing community is no more an option. We've seen a variety of platforms connecting people together or people to services, but how about connecting smart devices to people under the biggest social network platform... Facebook. IBM Watson, Google cloud and Microsoft Azure have already implemented IoT as part their services. Why not providing all Facebook users with a smart and social IoT platform? This could possibly be the first social smart platform in the world! 
 
 ### Solution
 We are launching “IoT” – a revolutionary form of social platform/application granting Facebook users the ability to control their smart devices with the possibility of granting/revoking access to/from other Facebook users of their friend list. Tech-wise, this is probably the world’s first smart/social IoT system. “IoT” allows every Facebook user to invite a Facebook friend of his own to access/control a smart device of your choice. “IoT” is more like a smart house - managed by Facebook users of your selection – with smart logs, alerts/alarms and behavior analysis yielded by implemented AI algorithms. 
