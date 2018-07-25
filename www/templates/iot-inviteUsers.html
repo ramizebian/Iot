@@ -1,0 +1,88 @@
+<ion-view view-title=" Invite Users" hide-nav-bar="false">
+    <!-- popover -->
+    <ion-nav-buttons side="right">
+
+        <button class="button  button-positive float-left width_30 text-center " ng-click="saveInviteUsers()">
+            <i class="ion ion-ios-cloud-upload-outline"></i>
+        </button>
+
+    </ion-nav-buttons>
+    <!-- ./popover -->
+    <ion-nav-title> Invite Users</ion-nav-title>
+
+    <ion-content delegate-handle="top" id="page-inviteUsers" class="">
+
+        <div>
+
+            <div class="mbsc-form-group padding_5">
+                <h3 class="mbsc-form-group-title padding_5">Invite Type</h3>
+                <div class="padding_5">
+
+                    <label class="container float-left" style="margin-right: 20px">For Ever
+                        <input type="radio" ng-value="1" ng-model="deviceInfoValueD.type" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container float-left">Specific Date
+                        <input type="radio" ng-value="2" ng-model="deviceInfoValueD.type" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+
+
+                </div>
+                <div ng-if="deviceInfoValueD.type==2">
+                    <label ng-init="initDataRAnge()">
+                        <input id="startDate" type="hidden" readonly/>
+                        <input id="endDate" type="hidden" readonly/>
+
+                        <div class="item item-divider padding_5 " style="font-size: 13px;cursor: pointer">
+                            <i class="ion ion-calendar blue-color" style="font-size: 15px ; margin-right: 10px"> </i>
+                            <span>  {{val[0] | date:"MM/dd/yyyy 'at' h:mma"}}</span>
+                            <span class="blue-color" style="margin: 0px 5px;font-size: 14px"> To </span>
+                            <span>  {{val[1] | date:"MM/dd/yyyy 'at' h:mma"}}</span>
+                        </div>
+
+                    </label>
+                    <div ng-model="val" mobiscroll-range="demo"></div>
+                </div>
+                <br>
+            </div>
+        </div>
+        <div>
+
+
+            <ul class="list">
+                <li class="item item-checkbox">
+                    <div class="no-padding noborder width_100" style="float:left;display: block ;">
+                        <div class="item item-avatar width_100 noborder" style="height: auto">
+                            <img src="img\svg\friendship.svg">
+                            <h2>Pretty Hate Machine</h2>
+                            <p>Nine Inch Nails </p>
+                        </div>
+                    </div>
+
+                    <label class="checkbox">
+                        <input type="checkbox">
+                    </label>
+                </li>
+
+                <li class="item item-checkbox">
+                    <div class="no-padding noborder width_100" style="float:left;display: block ;">
+                        <div class="item item-avatar width_100 noborder" style="height: auto">
+                            <img src="img\svg\friendship.svg">
+                            <h2>Pretty Hate Machine</h2>
+                            <p>Nine Inch Nails </p>
+                        </div>
+                    </div>
+
+                    <label class="checkbox">
+                        <input type="checkbox" checked="Checked">
+                    </label>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+    </ion-content>
+</ion-view>

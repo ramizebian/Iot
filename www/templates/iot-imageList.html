@@ -1,0 +1,22 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-calm-900 padding_5" style="background-color: #0D47A1!important;display: block">
+        <div class="float-left" style="margin-left: 38%;margin-top: 7px"><span> Picture List</span></div>
+        <i class="ion ion-close float-right padding_5 "
+           ng-click="closeChooseImageDialog()">
+        </i>
+
+    </ion-header-bar>
+
+    <ion-content>
+        <div style="margin-top: 20px ;text-align: center;vertical-align: middle">
+            <div ng-repeat="image in getFiles" class="box-shadow"
+                 style="display: inline-block; margin: 2px;width: 150px ;height: 100px;padding: 10px;text-align: center;cursor: pointer"
+                 ng-click="deviceData.image=image;closeChooseImageDialog()"
+            >
+                <img width="50px" src='img/svg/{{image}}'>
+            </div>
+        </div>
+
+
+    </ion-content>
+</ion-modal-view>

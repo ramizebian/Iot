@@ -1,0 +1,34 @@
+	<ion-view view-title=" Menu" hide-nav-bar="false" >
+		<!-- popover -->
+		<ion-nav-buttons side="right">
+			<button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
+		</ion-nav-buttons>
+		<!-- ./popover -->
+		<ion-nav-title> Menu</ion-nav-title>
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-slide_tab_menu" class=" page-slide_tab_menu">
+		
+	<div style="width: 100%;height:100%;">
+		<ion-slide-box class="ion-slide-tabs" slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
+			<ion-slide ion-slide-tab-label="Activity" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-href="#/iot/devise" >
+								<i class="icon ion-ios-home" ></i>
+								<h2>{{ "Device" | translate }}</h2>
+								<span class="item-note pull-left">Menu 1</span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/iot/settings" >
+								<i class="icon ion-android-settings" ></i>
+								<h2>{{ "Settings" | translate }}</h2>
+								<span class="item-note pull-left">Menu 2</span>
+							</a>
+						</div>
+					</ion-content>
+			</ion-slide>
+		</ion-slide-box>
+	</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

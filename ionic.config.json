@@ -1,0 +1,15 @@
+{
+  "name": "iot",
+  "app_id": "com.imabuilder.facebookhackathon.iot",
+  "type": "ionic1",
+  "integrations": {
+    "gulp": {},
+    "cordova": {}
+  },
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}

@@ -1,0 +1,22 @@
+<ion-tabs class="tabs-striped  tabs-icon-top tabs-background-stable tabs-color-dark" ng-class="{'tabs-item-hide': shouldHide()}"  data-ink-opacity=".35" >
+	<ion-tab class="menu-activity" title="{{ 'Activity' | translate }}" icon-off="ion-arrow-graph-up-right" icon-on="ion-arrow-graph-up-right devise_color" ui-sref="iot.activity" >
+		<ion-nav-view animation="none" name="iot-activity"></ion-nav-view>
+	</ion-tab>
+	<ion-tab class="menu-devise main-tab" title="{{ 'Device' | translate }}"
+			 icon-on="ion-ios-home devise_color" icon-off="ion-ios-home "
+			 ui-sref="iot.devise" >
+		<ion-nav-view animation="none" name="iot-devise"></ion-nav-view>
+	</ion-tab>
+	<ion-tab class="menu-settings" title="{{ 'Settings' | translate }}" icon-off="ion-android-settings" icon-on="ion-android-settings devise_color" ui-sref="iot.settings" >
+		<ion-nav-view animation="none" name="iot-settings"></ion-nav-view>
+	</ion-tab>
+	<ion-tab class="hide menu-about_us" title="About Us"  ui-sref="iot.about_us"  >
+		<ion-nav-view animation="none" name="iot-about_us"></ion-nav-view>
+	</ion-tab>
+	<ion-tab class="hide menu-dashboard" title="Dashboard"  ui-sref="iot.dashboard"  >
+		<ion-nav-view animation="none" name="iot-dashboard"></ion-nav-view>
+	</ion-tab>
+	<ion-tab class="hide menu-slide_tab_menu" title="Menu"  ui-sref="iot.slide_tab_menu"  >
+		<ion-nav-view animation="none" name="iot-slide_tab_menu"></ion-nav-view>
+	</ion-tab>
+</ion-tabs>
