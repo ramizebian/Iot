@@ -1,0 +1,32 @@
+<ion-view view-title=" Settings" hide-nav-bar="false">
+    <!-- popover -->
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover"
+                ng-click="popover.show($event)"></button>
+    </ion-nav-buttons>
+    <!-- ./popover -->
+    <ion-nav-title> Settings</ion-nav-title>
+    <!-- content -->
+    <ion-content delegate-handle="top" id="page-settings">
+
+        <div class="div-profile">
+
+            <figure class="snip1344"><img src="{{user['picture']}}" alt="profile-sample1" class="background"/><img
+                    src="{{user['picture']}}" alt="profile-sample1" class="profile"/>
+                <figcaption>
+                    <h3>{{user['name']}}<span>{{user['email']}}</span></h3>
+                    <div class="icons">
+                         <i class="ion-social-reddit-outline"></i>
+                         <i class="ion-social-twitter-outline"></i>
+                         <i class="ion-social-vimeo-outline"></i>
+                    </div>
+                </figcaption>
+            </figure>
+
+
+
+        </div>
+
+    </ion-content>
+    <!-- ./content -->
+</ion-view>

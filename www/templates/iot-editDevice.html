@@ -1,0 +1,52 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-calm-900 padding_5" style="background-color: #0D47A1!important;display: block">
+        <div class="float-left" style="margin-left: 38%;margin-top: 7px"><span> Device Data</span></div>
+        <i class="ion ion-close float-right padding_5 "
+           ng-click="closeEditDeviceDialog()">
+        </i>
+
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="info_div">
+
+            <h4 class="">Device image</h4>
+            <img width="100" src="img/svg/{{deviceData.image}}" ng-click="showChooseImageDialog()" style='width: 100px;height: 100px' >
+            <!--<button class="button  button-stable float-right" ng-click="showChooseImageDialog()">{{ 'Select' |-->
+                <!--translate }}-->
+            <!--</button>-->
+
+            <h4 class="">Device Code</h4>
+            <ion-input>
+                <input class="gray-border width_100 padding_5" type="text" ng-model="deviceData.device_code"
+                       placeholder="Device Id">
+            </ion-input>
+            <h4 class="">Device Name</h4>
+            <ion-input>
+                <input class="gray-border width_100 padding_5" type="text" ng-model="deviceData.name"
+                       placeholder="Device Name">
+            </ion-input>
+            <h4 class="">Device Details</h4>
+            <ion-input>
+                <textarea class="gray-border width_100 padding_5" rows="4" ng-model="deviceData.detail"
+                          placeholder="Device Details"></textarea>
+            </ion-input>
+            <ion-input>
+                <textarea class="gray-border width_100 padding_5" rows="4" ng-model="deviceData.fk_place_id"
+                          placeholder="Device Details"></textarea>
+            </ion-input>
+
+        </div>
+        <div style="margin-bottom: 10px;padding-bottom: 20px">
+            <button class="button  button-positive float-left " ng-click="saveDevice()"><i
+                    class="ion ion-ios-cloud-upload-outline"> &nbsp;</i> {{ 'Save' | translate }}
+            </button>
+            <button class="button  button-stable float-right" ng-click="closeEditDeviceDialog()">{{ 'Close' |
+                translate }}
+            </button>
+
+            <br>
+            <br>
+        </div>
+    </ion-content>
+</ion-modal-view>

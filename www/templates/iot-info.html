@@ -1,0 +1,80 @@
+<ion-modal-view>
+    <ion-header-bar class=" bar-calm-900 " style="background-color: #0D47A1!important;display: block;padding: 5px">
+        <div class="float-left padding_5"><span> {{deviceInfoValueD.name}}</span></div>
+        <i class="ion ion-close float-right padding_5 "
+           ng-click="closeDeviceInfoDialog()">
+        </i>
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="info_div">
+            <div class="display-block ">
+                    <span class="float-left" style="font-size: 22px;display: inline-flex;margin: -5px -2px"
+                          ng-click="showEditPlaceDialog(true)">
+                    </span>
+
+                <div class="item item-toggle float-right" style="height: 50px ;border: 0px">
+                    <label class="toggle toggle-balanced">
+                        <input type="checkbox"  ng-model="deviceInfoValueD.status" ng-change="changeStatus(deviceInfoValueD.id,deviceInfoValueD.status)">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </div>
+
+            </div>
+            <div>
+                <img width="100px" class="" src="img/svg/{{deviceInfoValueD.image}}">
+                <h3 class="" style="margin-top: 10px;font-size: 28px">{{deviceInfoValueD.name}}</h3>
+                <h4 class="">{{deviceInfoValueD.detail}}</h4>
+            </div>
+
+        </div>
+
+        <div >
+            <div class="padding_5 width_100" style="background-color: #dddddd;display: flow-root;">
+                <i style="font-size: 30px;margin: 4px 12px 4px 5px ;color: red" class="icon ion-trash-a float-left"  ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></i>
+                <span style="font-size: 33px;margin-top: 10px ; height: 30px ; display: block;float: left">List Invite User(s)</span>
+
+                <i style="font-size: 30px;margin: 4px 12px 4px 5px ;color: #0e7df4" class="icon ion-android-add-circle float-right"  ng-click="showInviteUsersDialog()"></i>
+
+            </div>
+
+
+                <!-- The list directive is great, but be sure to also checkout the collection repeat directive when scrolling through large lists -->
+
+                <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+
+                    <ion-item ng-repeat="inviteUser in inviteUsers" class="item-remove-animate width_100 ">
+                        <div class="no-padding noborder width_100" style="float:left;display: block ;">
+                                <div class="item item-avatar width_100 noborder" style="height: auto">
+                                    <img src="{{inviteUser.image}}">
+                                    <h2>{{inviteUser.name}}</h2>
+                                    <p>{{inviteUser.email}}</p>
+                                </div>
+                        </div>
+                        <ion-delete-button class="ion-minus-circled float-left no-padding " style="box-shadow:  0 0px 0px 0 rgba(0,0,0,0.16), 0 0px 0px 0 rgba(0,0,0,0.12);margin-left: 10px"
+                                           ng-click="onInviteDelete(inviteUser)">
+                        </ion-delete-button>
+
+                        <ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
+                    </ion-item>
+
+                </ion-list>
+
+
+
+
+        </div>
+
+        <div style="margin-bottom: 10px;padding-bottom: 20px">
+            <button class="button  button-positive float-left width_30" ng-click="closeDeviceInfoDialog()"><i
+                    class="ion ion-ios-cloud-upload-outline"> &nbsp;</i> {{ 'Save' | translate }}
+            </button>
+            <button class="button  button-stable float-right width_30" ng-click="closeDeviceInfoDialog()">{{ 'Close' | translate }}
+            </button>
+            <br>
+            <br>
+        </div>
+    </ion-content>
+</ion-modal-view>

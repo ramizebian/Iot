@@ -1,0 +1,31 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-calm-900 padding_5" style="background-color: #0D47A1!important;display: block">
+        <div class="float-left" style="margin-left: 38%;margin-top: 7px"><span> Place List</span></div>
+        <i class="ion ion-close float-right padding_5 "
+           ng-click="closePlaceListDialog()">
+        </i>
+
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="info_div">
+            <div class="display-table gray-border-bottom width_100 padding_5"  ng-repeat="place in placeList" ng-click="selectPlace(place)" ng-class="{'background-gray':place.id==placeSelected.id}">
+               <div class="float-left" style="font-size: 70px;width: 100px;padding: 15px">
+
+                   <img  ng-if="place.type==1" src="img/svg/home.svg">
+                   <img  ng-if="place.type==2" src="img/svg/analytics.svg">
+                   <img  ng-if="place.type==3" src="img/svg/building.svg">
+
+               </div>
+                <div class="float-left">
+                <h3 class="" style="font-size: 24px">{{place.name}}</h3>
+                <h5 class="">{{place.details}}</h5>
+                <h4 class="" style="font-size: 22px">{{place.deviseCount}} Device(s)</h4>
+                </div>
+
+            </div>
+        </div>
+
+
+    </ion-content>
+</ion-modal-view>
